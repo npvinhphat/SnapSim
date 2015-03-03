@@ -6,18 +6,21 @@ public static class Container
 	//public static GameController GameController { private set; get; }
 	//public static InventoryManager InventoryManager { private set; get; }
 	// insert more stuff here...
+
+    public static FeatureLayout0 FeatureLayout { private set; get; }
 	
 	public static GameObject HoldAll { private set; get; }
 	
 	static Container()
 	{
 		HoldAll = SafeFindWithTag(Tags.holdAll);
-		Object.DontDestroyOnLoad(HoldAll);
-		
-		//AtlasManager = Add(AtlasManager);
-		//InventoryManager = Add(InventoryManager);
-		//GameController = Add(GameController);
-		// when you insert something new, don't forget to Add it
+	    Object.DontDestroyOnLoad(HoldAll);
+
+	    //AtlasManager = Add(AtlasManager);
+	    //InventoryManager = Add(InventoryManager);
+	    //GameController = Add(GameController);
+	    // when you insert something new, don't forget to Add it
+	    FeatureLayout = Add(FeatureLayout);
 	}
 	
 	private static GameObject SafeFindWithTag(string tag)
