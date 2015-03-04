@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FeatureLayout0 : FeatureLayout {
+public class FeatureLayout0 : FeatureLayout
+{
+    public static LineRenderer WireLineRenderer;
 
     public override void TestFunction()
     {

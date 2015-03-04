@@ -1,17 +1,21 @@
-﻿public class Capacitor: Device
+﻿public class PulseVoltageSource: Device
 {
     public override TypeEnum DeviceType
     {
-        get { return TypeEnum.Capacitor; }
+        get { return TypeEnum.PulseVoltageSource; }
     }
 
     public DeviceNode PositiveNode;
     public DeviceNode NegativeNode;
-    public double Resistance = 100;
+    public double V0 = 0;
+    public double Va = 5;
+    public double Frequency = 60;
+    public double Td = 0;
+    public double Damp = 0;
 
     public override string ToString()
-    { 
-        return "C" + DeviceName + " " + PositiveNode + " " + NegativeNode + " " + Device.ConvertValueToString(Resistance) + "\n";
+    {
+        return "V" + DeviceName + " " + PositiveNode + " " + NegativeNode + " SIN ( " + V0 + "V " + Va + "V " + Frequency + "Hz " + Td + " " + Damp + " )" + "\n";
     }
 
     public void SetPositiveNode(Node positiveNode)
@@ -26,3 +30,5 @@
         negativeNode.AddDeviceNode(NegativeNode);
     }
 }
+
+

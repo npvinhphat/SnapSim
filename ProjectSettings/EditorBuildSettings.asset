@@ -10,4 +10,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CaptureTestScene.unity
   - enabled: 1
-    path: Assets/Scenes/Untitled.unity
+    path: Assets/Scenes/MainScene.unity

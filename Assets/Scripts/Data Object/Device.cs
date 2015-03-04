@@ -10,10 +10,12 @@ public abstract class Device : MonoBehaviour
     public enum TypeEnum
     {
         Resistor,
-        Capacitor
+        Capacitor,
+        Ground,
+        PulseVoltageSource
     }
 
-    void Awake()
+    public void Awake()
     {
         if (DeviceName == null)
         {
@@ -40,7 +42,7 @@ public abstract class Device : MonoBehaviour
 
     public static string ConvertValueToString(double value)
     {
-        return "nope";
+        return value.ToString();
     }
 
     public static double ConvertStringToValue(string str)
@@ -91,7 +93,10 @@ public abstract class Device : MonoBehaviour
         string str = "";
         foreach (Device device in devices)
         {
-            str = str + device + "\n";
+            if (device.DeviceType != Device.TypeEnum.Ground)
+            {
+                str = str + device;
+            }
         }
         /* File.WriteAllText(Application.dataPath + "/test.text", str));
         AssetDatabase.Refresh();*/

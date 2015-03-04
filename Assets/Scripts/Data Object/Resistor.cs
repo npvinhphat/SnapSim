@@ -5,23 +5,25 @@
         get { return TypeEnum.Resistor; }
     }
 
-    public string Node1 = null;
-    public string Node2 = null;
+    public DeviceNode PositiveNode;
+    public DeviceNode NegativeNode;
     public double Resistance = 100;
 
     public override string ToString()
     {
-        return "R" + DeviceName + " " + Node1 + " " + Node2 + " " + Device.ConvertValueToString(Resistance);
+        return "R" + DeviceName + " " + PositiveNode + " " + NegativeNode + " " + Device.ConvertValueToString(Resistance) + "\n";
     }
 
-    public void SetNode1(string node1)
+    public void SetPositiveNode(Node positiveNode)
     {
-        Node1 = node1;
+        PositiveNode.ConnectedNode = positiveNode;
+        positiveNode.AddDeviceNode(PositiveNode);
     }
 
-    public void SetNode2(string node2)
+    public void SetNegativeNode(Node negativeNode)
     {
-        Node2 = node2;
+        NegativeNode.ConnectedNode = negativeNode;
+        negativeNode.AddDeviceNode(NegativeNode);
     }
 }
 

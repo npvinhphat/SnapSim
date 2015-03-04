@@ -18,7 +18,7 @@ public class BGCamera : MonoBehaviour {
 		_webCamTexture = new WebCamTexture (DeviceName, Screen.width, Screen.height, 60);
 		_webCam = GameObject.FindGameObjectWithTag ("WebCam");
 		_webCam.transform.localScale = new Vector3 (2f, 1f, 1f);
-		_webCam.renderer.material.mainTexture = _webCamTexture;
+		_webCam.GetComponent<Renderer>().material.mainTexture = _webCamTexture;
 
 		_webCamTexture.Play ();
 	}

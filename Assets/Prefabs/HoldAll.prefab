@@ -65,8 +65,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Resistor: {fileID: 148406, guid: 6c26f10a767d58f4982e11917af86fd2, type: 2}
   Capacitor: {fileID: 148406, guid: 2baa5ead974efdc45ae7dd7532075ecc, type: 2}
-  Inductor: {fileID: 0}
-  Battery: {fileID: 0}
+  PulseVoltageSource: {fileID: 148406, guid: a2db53840df47c94388f953c5220fd34, type: 2}
+  Ground: {fileID: 148406, guid: 4f4ba4afa0987b74cbf2eb4b3206729d, type: 2}
+  Wire: {fileID: 163922, guid: 718d7032ebacbed41928414cddc0cd84, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -78,4 +79,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 181164}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
