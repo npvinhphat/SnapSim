@@ -11,6 +11,5 @@ public class FeatureLayout0 : FeatureLayout {
 
     public override void MakeObjectsFromText(TextAsset textAsset)
     {
-        
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditorInternal;
+using UnityEngine;
 
 public static class Container
 {
@@ -8,12 +9,14 @@ public static class Container
 	// insert more stuff here...
 
     public static FeatureLayout0 FeatureLayout { private set; get; }
+
+    public static CircuitElements CircuitElements { private set; get; }
 	
 	public static GameObject HoldAll { private set; get; }
 	
 	static Container()
 	{
-		HoldAll = SafeFindWithTag(Tags.holdAll);
+		HoldAll = SafeFindWithTag(Tags.HoldAll);
 	    Object.DontDestroyOnLoad(HoldAll);
 
 	    //AtlasManager = Add(AtlasManager);
@@ -21,6 +24,7 @@ public static class Container
 	    //GameController = Add(GameController);
 	    // when you insert something new, don't forget to Add it
 	    FeatureLayout = Add(FeatureLayout);
+	    CircuitElements = Add(CircuitElements);
 	}
 	
 	private static GameObject SafeFindWithTag(string tag)

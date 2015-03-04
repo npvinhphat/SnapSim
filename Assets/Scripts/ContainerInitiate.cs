@@ -4,7 +4,7 @@ using System.Collections;
 public class ContainerInitiate : MonoBehaviourSingleton<ContainerInitiate>
 {
 	// Use this for initialization
-	void Awake ()
+    protected override void Awake ()
 	{
 	    Container.Ping();
         if (Application.loadedLevelName == "PreScene")

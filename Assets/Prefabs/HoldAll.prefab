@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 481164}
   - 114: {fileID: 11434418}
   - 114: {fileID: 11401356}
+  - 114: {fileID: 11477260}
   m_Layer: 0
   m_Name: HoldAll
   m_TagString: HoldAll
@@ -51,6 +52,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3161a0892ca1f5e47b3a9c23a07417ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11477260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 845ff9a275736d14e9cdc1588a9e7d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resistor: {fileID: 148406, guid: 6c26f10a767d58f4982e11917af86fd2, type: 2}
+  Capacitor: {fileID: 148406, guid: 2baa5ead974efdc45ae7dd7532075ecc, type: 2}
+  Inductor: {fileID: 0}
+  Battery: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
