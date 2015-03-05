@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Mime;
 using UnityEngine;
 using System.Collections;
 
@@ -9,9 +8,11 @@ public class Simulator0 : Simulator
     public int NumberOfVariables = 0;
     public int NumberOfPoints = 0;
     public List<string> NameList;
-    public List<string> UnitList;
+    public List<string> UnitList; 
     public List<List<double>> DataList;
-    public bool IsSimulating { get; private set; }
+    public List<double> MaxList;
+    public bool IsSimulating = false;
+    public int CurrentStep = 0;
 
     public override void GenerateTextFromCircuit()
     {
@@ -32,6 +33,7 @@ public class Simulator0 : Simulator
         {
             NameList.Add(strings[7 + i].Trim().Split('\t')[1]);
             UnitList.Add(strings[7 + i].Trim().Split('\t')[2]);
+            MaxList.Add(0);
             List<double> newList = new List<double>();
             DataList.Add(newList);
         }
@@ -39,18 +41,27 @@ public class Simulator0 : Simulator
         for (int j = 0; j < NumberOfPoints; j++)
         {
             DataList[0].Add(Convert.ToDouble(strings[currentLine].Split('\t')[1]));
+            MaxList[0] = Math.Max(MaxList[0], DataList[0][j]);
             for (int i = 1; i < NumberOfVariables; i++)
             {
                 DataList[i].Add(Convert.ToDouble(strings[currentLine + i].Trim('\t')));
+                MaxList[i] = Math.Max(MaxList[i], DataList[i][j]);
             }
             currentLine += NumberOfVariables + 1;
         }
     }
 
+
+
     public override void StartSimulation()
     {
         GetDataFromText(null);
+        
+        // SendDataToObjects
+
+        CurrentStep = 0;
         IsSimulating = true;
+
     }
 
     public override void StopSimulation()

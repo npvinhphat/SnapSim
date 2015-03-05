@@ -73,7 +73,7 @@ public abstract class Device : MonoBehaviour
         }
         return value;
     }
-
+    
     public static Device[] GetDevices()
     {
         var gameObjects = GameObject.FindGameObjectsWithTag(Tags.Device);
@@ -90,7 +90,8 @@ public abstract class Device : MonoBehaviour
      */
     public static void ConvertDevicesToTextFile(Device[] devices)
     {
-        string str = "";
+        string str = "Circuit Name\n";
+        str = str + ".subckt capacitor in out cval=100nF\nR in mid 1\nC mid out {cval}\n.ends\n";
         foreach (Device device in devices)
         {
             if (device.DeviceType != Device.TypeEnum.Ground)
@@ -98,6 +99,13 @@ public abstract class Device : MonoBehaviour
                 str = str + device;
             }
         }
+
+        // Type Of simulation
+        str = str + ".tran 0.1 7.0\n";
+
+        // End of File
+        str = str + ".end\n";
+
         /* File.WriteAllText(Application.dataPath + "/test.text", str));
         AssetDatabase.Refresh();*/
         print(str);

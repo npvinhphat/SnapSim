@@ -9,6 +9,7 @@ TagManager:
   - HoldAll
   - DeviceNode
   - Node
+  - CurrentDot
   layers:
   - Default
   - TransparentFX

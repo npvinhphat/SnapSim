@@ -25,5 +25,16 @@
         NegativeNode.ConnectedNode = negativeNode;
         negativeNode.AddDeviceNode(NegativeNode);
     }
+
+    public double GetVoltageDrop()
+    {
+        return (PositiveNode.ConnectedNode.GetVoltage() - NegativeNode.ConnectedNode.GetVoltage());
+    }
+
+    public double GetCurrent()
+    {
+        return GetVoltageDrop()/Resistance;
+    }
+
 }
 

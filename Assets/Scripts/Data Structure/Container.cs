@@ -9,8 +9,9 @@ public static class Container
 	// insert more stuff here...
 
     public static FeatureLayout0 FeatureLayout { private set; get; }
-
     public static CircuitElements CircuitElements { private set; get; }
+    public static Simulator0 Simulator { private set; get; }
+    public static EventManager EventManager { private set; get; }
 	
 	public static GameObject HoldAll { private set; get; }
 	
@@ -25,6 +26,8 @@ public static class Container
 	    // when you insert something new, don't forget to Add it
 	    FeatureLayout = Add(FeatureLayout);
 	    CircuitElements = Add(CircuitElements);
+	    Simulator = Add(Simulator);
+	    EventManager = Add(EventManager);
 	}
 	
 	private static GameObject SafeFindWithTag(string tag)

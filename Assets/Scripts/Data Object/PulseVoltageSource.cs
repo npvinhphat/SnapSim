@@ -29,6 +29,18 @@
         NegativeNode.ConnectedNode = negativeNode;
         negativeNode.AddDeviceNode(NegativeNode);
     }
+
+    public double GetVoltageDrop()
+    {
+        return (PositiveNode.ConnectedNode.GetVoltage() - NegativeNode.ConnectedNode.GetVoltage());
+    }
+
+    public double GetCurrent()
+    {
+        string str = "i(v" + DeviceName + ")";
+        int index = Container.Simulator.NameList.IndexOf(str);
+        return Container.Simulator.DataList[index][Container.Simulator.CurrentStep];
+    }
 }
 
 
