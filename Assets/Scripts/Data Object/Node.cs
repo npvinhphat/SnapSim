@@ -47,6 +47,7 @@ public class Node : MonoBehaviour
     {
         if (Container.Simulator.IsSimulating)
         {
+            if (IsGround) return 0;
             string str = "v(" + NodeName + ")";
             int index = Container.Simulator.NameList.IndexOf(str);
             return Container.Simulator.DataList[index][Container.Simulator.CurrentStep];
@@ -54,6 +55,21 @@ public class Node : MonoBehaviour
         else
         {
             Debug.LogError("Get Voltage Of Node before having the data");
+            return 0;
+        }
+    }
+
+    public double GetMaximumVoltage()
+    {
+        if (Container.Simulator.IsSimulating)
+        {
+            string str = "v(" + NodeName + ")";
+            int index = Container.Simulator.NameList.IndexOf(str);
+            return Container.Simulator.MaxList[index];
+        }
+        else
+        {
+            Debug.LogError("Get Maximum Abs Voltage Of Node before having the data");
             return 0;
         }
     }

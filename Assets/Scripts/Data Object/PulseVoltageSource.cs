@@ -41,6 +41,11 @@
         int index = Container.Simulator.NameList.IndexOf(str);
         return Container.Simulator.DataList[index][Container.Simulator.CurrentStep];
     }
+
+    public override double GetPercentageCurrent()
+    {
+        return GetCurrent()/Container.Simulator.MaximumCurrent;
+    }
 }
 
 

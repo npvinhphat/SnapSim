@@ -80,6 +80,11 @@ MonoBehaviour:
   NumberOfPoints: 0
   NameList: []
   UnitList: []
+  MaxList: []
+  IsSimulating: 0
+  CurrentStep: 0
+  MaximumVoltage: 0
+  MaximumCurrent: 0
 --- !u!114 &11477260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,6 +101,7 @@ MonoBehaviour:
   PulseVoltageSource: {fileID: 148406, guid: a2db53840df47c94388f953c5220fd34, type: 2}
   Ground: {fileID: 148406, guid: 4f4ba4afa0987b74cbf2eb4b3206729d, type: 2}
   Wire: {fileID: 163922, guid: 718d7032ebacbed41928414cddc0cd84, type: 2}
+  CurrentDot: {fileID: 170920, guid: 921e4acbc54e9834288173054304377e, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

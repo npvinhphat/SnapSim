@@ -36,6 +36,11 @@
         string str = "xc" + DeviceName + ".mid";
         int index = Container.Simulator.NameList.IndexOf(str);
         double midVoltage = Container.Simulator.DataList[index][Container.Simulator.CurrentStep];
-        return (PositiveNode.ConnectedNode.GetVoltage() - midVoltage);
+        return -(NegativeNode.ConnectedNode.GetVoltage() - midVoltage);
+    }
+
+    public override double GetPercentageCurrent()
+    {
+        return GetCurrent()/Container.Simulator.MaximumCurrent;
     }
 }

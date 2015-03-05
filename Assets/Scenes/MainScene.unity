@@ -134,11 +134,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 474832, guid: 921e4acbc54e9834288173054304377e, type: 2}
       propertyPath: m_LocalScale.x
-      value: .300000012
+      value: .600000024
       objectReference: {fileID: 0}
     - target: {fileID: 474832, guid: 921e4acbc54e9834288173054304377e, type: 2}
       propertyPath: m_LocalScale.y
-      value: .800000012
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 170920, guid: 921e4acbc54e9834288173054304377e, type: 2}
       propertyPath: m_Name
@@ -164,6 +164,18 @@ Prefab:
       propertyPath: AttachedDevice
       value: 
       objectReference: {fileID: 1767360486}
+    - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
+      propertyPath: NormalSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
+      propertyPath: TimeFactor
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 170920, guid: 921e4acbc54e9834288173054304377e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 921e4acbc54e9834288173054304377e, type: 2}
   m_IsPrefabParent: 0
@@ -278,11 +290,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 474832, guid: 921e4acbc54e9834288173054304377e, type: 2}
       propertyPath: m_LocalScale.x
-      value: .300000012
+      value: .600000024
       objectReference: {fileID: 0}
     - target: {fileID: 474832, guid: 921e4acbc54e9834288173054304377e, type: 2}
       propertyPath: m_LocalScale.y
-      value: .800000012
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 170920, guid: 921e4acbc54e9834288173054304377e, type: 2}
       propertyPath: m_Name
@@ -307,6 +319,18 @@ Prefab:
     - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
       propertyPath: EndPos.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
+      propertyPath: NormalSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
+      propertyPath: TimeFactor
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 170920, guid: 921e4acbc54e9834288173054304377e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 921e4acbc54e9834288173054304377e, type: 2}
@@ -346,7 +370,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1143fcd01e070964fa3a92cf2a46487e, type: 3}
-  m_Color: {r: .489655256, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: .974930286, a: 0}
 --- !u!114 &659829671
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11487740, guid: 6c26f10a767d58f4982e11917af86fd2,
@@ -382,7 +406,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1143fcd01e070964fa3a92cf2a46487e, type: 3}
-  m_Color: {r: .489655256, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: .974930286, a: 0}
 --- !u!114 &821494759
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11478450, guid: b4e0157ab7602b9479e5659d3ffa60d0,
@@ -869,11 +893,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 474832, guid: 921e4acbc54e9834288173054304377e, type: 2}
       propertyPath: m_LocalScale.x
-      value: .300000012
+      value: .600000024
       objectReference: {fileID: 0}
     - target: {fileID: 474832, guid: 921e4acbc54e9834288173054304377e, type: 2}
       propertyPath: m_LocalScale.y
-      value: .800000012
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 170920, guid: 921e4acbc54e9834288173054304377e, type: 2}
       propertyPath: m_Name
@@ -899,6 +923,18 @@ Prefab:
       propertyPath: AttachedDevice
       value: 
       objectReference: {fileID: 1767360486}
+    - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
+      propertyPath: NormalSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
+      propertyPath: TimeFactor
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 170920, guid: 921e4acbc54e9834288173054304377e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 921e4acbc54e9834288173054304377e, type: 2}
   m_IsPrefabParent: 0
@@ -931,7 +967,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1143fcd01e070964fa3a92cf2a46487e, type: 3}
-  m_Color: {r: .489655256, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: .974930286, a: 0}
 --- !u!1001 &1738856324
 Prefab:
   m_ObjectHideFlags: 0
@@ -971,33 +1007,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 21287584, guid: 921e4acbc54e9834288173054304377e, type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
-      propertyPath: CurrentValue
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
       propertyPath: AttachedDevice
       value: 
       objectReference: {fileID: 1767360486}
-    - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
-      propertyPath: StartPos.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
-      propertyPath: StartPos.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
-      propertyPath: EndPos.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11402716, guid: 921e4acbc54e9834288173054304377e, type: 2}
-      propertyPath: EndPos.y
-      value: 2
+    - target: {fileID: 170920, guid: 921e4acbc54e9834288173054304377e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 921e4acbc54e9834288173054304377e, type: 2}

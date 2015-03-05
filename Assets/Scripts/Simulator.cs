@@ -22,4 +22,9 @@ public class Simulator : MonoBehaviour {
     {
         
     }
+
+    public virtual void GenerateCurrentDots()
+    {
+        
+    }
 }

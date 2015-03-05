@@ -40,6 +40,8 @@ public abstract class Device : MonoBehaviour
         1e12
     };
 
+    public abstract double GetPercentageCurrent();
+
     public static string ConvertValueToString(double value)
     {
         return value.ToString();

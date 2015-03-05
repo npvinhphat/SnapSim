@@ -11,4 +11,9 @@
     {
         return "";
     }
+
+    public override double GetPercentageCurrent()
+    {
+        throw new System.NotImplementedException();
+    }
 }

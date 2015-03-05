@@ -36,5 +36,9 @@
         return GetVoltageDrop()/Resistance;
     }
 
+    public override double GetPercentageCurrent()
+    {
+        return GetCurrent()/Container.Simulator.MaximumCurrent;
+    }
 }
 

@@ -8,6 +8,8 @@ public class CurrentDot : MonoBehaviour
     public Device AttachedDevice;
     public double CurrentValue = 1; // This value should be between -1 and 1
     public float NormalSpeed = 1f;
+    public float ColorFactor = 1.5f;
+    public float TimeFactor = 1f;
     public float T = 0;
 
 	// Use this for initialization
@@ -22,6 +24,7 @@ public class CurrentDot : MonoBehaviour
 	{
 	    if (Container.Simulator.IsSimulating)
 	    {
+	        CurrentValue = GetCurrentValue();
 	        T += Time.deltaTime*NormalSpeed*(float) CurrentValue;
 	        if (T > 1f)
 	        {
@@ -33,28 +36,14 @@ public class CurrentDot : MonoBehaviour
 	        }
 	        transform.position = Vector3.Lerp(StartPos, EndPos, T);
 	        Color newColor = transform.GetComponent<SpriteRenderer>().color;
-	        newColor.a = Mathf.Abs((float) CurrentValue)*255f;
-	        transform.GetComponent<SpriteRenderer>().color = newColor;
+	        newColor.a = Mathf.Abs((float) CurrentValue * ColorFactor);
+            transform.GetComponent<SpriteRenderer>().color = Color.Lerp(transform.GetComponent<SpriteRenderer>().color, newColor, Time.deltaTime*TimeFactor);
+            //print(transform.GetComponent<SpriteRenderer>().color);
 	    }
 	}
 
     double GetCurrentValue()
     {
-        switch (AttachedDevice.DeviceType)
-        {
-            case Device.TypeEnum.Resistor:
-                Resistor tempResistor = AttachedDevice as Resistor;
-                return tempResistor.GetCurrent();
-                break;
-            case Device.TypeEnum.Capacitor:
-                Capacitor tempCapacitor = AttachedDevice as Capacitor;
-                return tempCapacitor.GetCurrent();
-            case Device.TypeEnum.PulseVoltageSource:
-                PulseVoltageSource tempPulseVoltageSource = AttachedDevice as PulseVoltageSource;
-                return tempPulseVoltageSource.GetCurrent();
-            default:
-                print("Error in get current value, no type");
-                return 0;
-        }
+        return AttachedDevice.GetPercentageCurrent();
     }
 }
