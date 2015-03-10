@@ -82,7 +82,7 @@ public class Simulator0 : Simulator
                     pointsList.Add(tempCapacitor.NegativeNode.transform.position);
                     pointsList.Add(tempCapacitor.PositiveNode.transform.position);
                     pointsList.Add(tempCapacitor.PositiveNode.ConnectedNode.transform.position);
-                    print("There is a capacitor");
+                    //print("There is a capacitor");
                     break;
                 case Device.TypeEnum.Ground:
                     break;
@@ -99,7 +99,6 @@ public class Simulator0 : Simulator
                     pointsList.Add(tempPulseVoltageSource.NegativeNode.transform.position);
                     pointsList.Add(tempPulseVoltageSource.PositiveNode.transform.position);
                     pointsList.Add(tempPulseVoltageSource.PositiveNode.ConnectedNode.transform.position);
-                    break;
                     break;
             }
             for (int i = 0; i < pointsList.Count - 1; i++)
